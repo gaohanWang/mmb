@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/bese.css">
+  <link rel="stylesheet" href="css/product.css">
+  <title>商品详情页</title>
+</head>
+<body>
+<!--头部开始-->
+<header id="header" class="header">
+  <div class="logo">
+    <a href="index1.html"><img src="images/header_logo.png" alt=""></a>
+    <h1>商品详情页</h1>
+  </div>
+  <div class="appdown">
+    <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+  </div>
+  
+</header>
+
+<!--搜索内容-->
+<section class="search_info">
+  <input type="text" placeholder="请输入想要的商品">
+  <button>搜索</button>
+</section>
+
+<!--menu内容-->
+<section class="content">
+ <nav class="nav clearfix">
+   <a href="index1.html">首页 ></a>
+   <a href="productlist.html" class="tv">电视 ></a>
+   <a href="javascript:;">乐视tv ></a>
+   <a href="javascript:;" class="fr">筛选</a>
+ </nav>
+  
+  <!--内容详情信息-->
+  <div class="product_info clearfix">
+      <!--<div class="product_title_name">-->
+        <!--乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视-->
+      <!--</div>-->
+      <!--<div class="product_pic">-->
+        <!--<img src="images/product.jpg" alt="">-->
+      <!--</div>-->
+    <i class="icon_40"></i>
+    <!--<div class="tab">-->
+      <!--<ul class="clearfix">-->
+        <!--<li class="li_color">-->
+          <!--<a href="">比价购买</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="">产品参数</a>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="">评论(12313)</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <div class="price clearfix">
+      <div class="left">
+        <div class="fl mt"><img src="images/ic_search.png" alt=""></div>
+        <p class="fl">京东商城</p>
+      </div>
+      <div class="fr right">
+        <span class="fl">&yen;1999.00</span>
+        <a href="javascript:;" class="fr">去购买</a>
+      </div>
+    </div>
+    <!--<div class="notes">-->
+      <!--* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。-->
+    <!--</div>-->
+    <div class="product_com_title">
+      <div>网友评价</div>
+    </div>
+    <div class="product_com_list">
+      <ul>
+        <!--<li class="clearfix">-->
+          <!--<div class="time clearfix">-->
+            <!--<p class="fl">r8**d</p>-->
+            <!--<p class="fr">2016/10/1</p>-->
+          <!--</div>-->
+          <!--<div class="from clearfix"><p class="fr">购买自：京东商城</p></div>-->
+          <!--<div class="content">-->
+            <!--使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线-->
+          <!--</div>-->
+        <!--</li>-->
+      </ul>
+    </div>
+  </div>
+  
+  <!--加载更多-->
+  <div class="product_loading">
+    <a href="">查看更多评价</a>
+  </div>
+
+  
+</section>
+
+
+
+
+
+<!--底部开始-->
+<footer class="footer">
+  <div class="footer_top clearfix">
+    <a href="">登录</a>
+    <a href="">注册</a>
+    <a class="gototop" href="javascript:;">返回顶部</a>
+  </div>
+  <div class="footer_down">
+    <p>
+      <a href="javascript:;">手机APP下载 </a>
+      <a href="index1.html">慢慢买手机版</a>
+      -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+  </div>
+</footer>
+
+<!--分类选-->
+<script type="text/html" id="tpl">
+  {{each result v i }}
+  <div class="product_title_name">
+    {{v.productName}}
+  </div>
+  <div class="product_pic">
+    {{@v.productImg}}
+  </div>
+
+    {{@v.bjShop}}
+
+{{/each}}
+
+</script>
+
+<!--商品-->
+<script type="text/html" id="tplproduct">
+  {{each result v i }}
+  <li class="clearfix">
+    <div class="time clearfix">
+      <p class="fl">{{v.comId}}</p>
+      <p class="fr">{{v.comTime}}</p>
+    </div>
+    <div class="from clearfix"><p class="fr">{{v.comFrom}}</p></div>
+    <div class="content">
+      {{v.comContent}}
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/bese.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+//头部改造
+.header{
+  .logo{
+    height: 50px;
+    width: 50px;
+  }
+  p{
+    height: 50px;
+    line-height:50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+  }
+}
+.product_content{
+  li{
+    width: 50%;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    &:nth-child(even){
+      border-left: 1px solid #ccc;
+
+    }
+  }
+  img {
+    width: 140px;
+    height:140px;
+    margin:0 auto ;
+  }
+
+  p.title{
+    height: 36px;
+    color: #000;
+    font-size: 14px;
+  }
+  p.price{
+    margin-top:5px;
+    color: #ff6c00;
+  }
+  p.time{
+    height: 30px;
+    line-height:30px;
+  }
+}
