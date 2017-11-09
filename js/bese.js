@@ -8,17 +8,17 @@ $(".footer_top .gototop").on("click",function () {
 })
 
 
-//获取商品的信息
-$.ajax({
-  type:"get",
-  url:"http://192.168.32.101:9090/api/getmoneyctrl",
-  dataType:"json",
-  success:function (data) {
-    console.log(data);
-    $(".product_content ul").html(template("tplproduct",data));
-  }
-  
-})
+// //获取商品的信息
+// $.ajax({
+//   type:"get",
+//   url:"http://192.168.32.101:9090/api/getmoneyctrl",
+//   dataType:"json",
+//   success:function (data) {
+//     console.log(data);
+//     $(".product_content ul").html(template("tplproduct",data));
+//   }
+//
+// })
 
 
 //封装字符串截取 地址栏里面的值

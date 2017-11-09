@@ -25,10 +25,10 @@ $(function () {
       dataType:"json",
       data:test,
       success:function (data) {
-        console.log(data);
+        // console.log(data);
         //渲染的数据内容
         $(".product_content ul").html(template("tplproduct",data));
-        
+        // console.log(data);
         //算出页数
         var page =  Math.ceil(data.totalCount /data.pagesize);
         var  arrpage = [];
@@ -37,8 +37,11 @@ $(function () {
         }
         console.log(arrpage);
         data.arrpage = arrpage;//select框的配值
-        $(".content .page .ye-content").html(template("page",data));
-        $("select").val( test.pageid)
+        console.log(data);
+        $(".content .page").html(template("pages",data));
+        
+        
+        $(".ye-content select").val( test.pageid)
         
         
       }
@@ -62,7 +65,8 @@ $(function () {
   //select 里面点击后跳到相应页面
   $("section").on("change","select",function () {
     test.pageid = $(this).val();
-    console.log(pageid+1);
+    console.log(test.pageid);
+    // console.log(pageid+1);
     
     render();
   })

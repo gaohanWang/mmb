@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/bese.css">
+  <link rel="stylesheet" href="css/moneyproduct.css">
+  <title>国内折扣</title>
+</head>
+<body>
+<!--头部开始-->
+<header id="header" class="header">
+  <div class="logo">
+    <a href="javascript:history.go(-1);"><img src="images/header_logo.png" alt=""></a>
+    <h1>国内折扣</h1>
+  </div>
+  <p>国内折扣</p>
+  <div class="appdown">
+    <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
+  </div>
+  
+</header>
+
+
+<!--商品内容-->
+<div class="product_content">
+  <div class="contarner">
+    <!--内容-->
+    <div class="contarner_content">
+      <!--大标题-->
+      <div class="title">
+        <h1>移动端凑单品：海天 鲜味 生抽 1.28L</h1>
+      </div>
+      <!--小标题-->
+      <div class="notes"><span>京东商城 10-25 14:10 小编烟火 / 慢慢买</span></div>
+      <!--内容-->
+      <div class="content">
+        <div class="picwrap"><img src="images/product.jpg" alt=""></div>
+        <p>海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。
+        </p>
+        
+        <p><img src="images/product.jpg" alt=""></p>
+        <!--中间地方选着-->
+        <div class="center">
+          <ul>
+            <li class="clearfix">
+              <a href="javascript:;">
+                <span class="fl">湖北</span>
+                <span class="fr">有货</span>
+              </a>
+            </li>
+            <li class="clearfix">
+              <a href="javascript:;">
+                <span class="fl">湖北</span>
+                <span class="fr">有货</span>
+              </a>
+            </li>
+            <li class="clearfix">
+              <a href="javascript:;" class="clearfix">
+                <span class="fl">湖北</span>
+                <span class="fr">有货</span>
+              </a>
+            </li>
+            <li class="clearfix">
+              <a href="javascript:;">
+                <span class="fl">湖北</span>
+                <span class="fr">有货</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- 地址跳转-->
+        <div class="href"><a href="javascript:;">前往购买</a></div>
+      </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    <!--大的二维码-->
+    <div class="container_code">
+      <img src="images/mmbweixin2.png" alt="">
+    </div>
+
+    
+    <!--评论框及评论-->
+    <div class="container_comment">
+      <!--<div class="comment_title">发表评论</div>-->
+      <!--<div class="comment_text">-->
+        <!--<textarea name="" id="" cols="30" rows="10" style="width: 100% ;height: 68px ; border: 1px solid #ccc; ">-->
+          <!---->
+        <!--</textarea>-->
+      <!--</div>-->
+      <!--<div class="go clearfix">-->
+        <!--<button class="fr">发表评论</button>-->
+      <!--</div>-->
+      <!--<div class="comment_note">-->
+        <!--<div class="title">最新评价</div>-->
+        <!--<div class="text clearfix">-->
+          <!--<div class="pic_left"><img src="images/product.jpg" alt=""></div>-->
+          <!--<div class="content">-->
+            <!--<div class="time clearfix">-->
+              <!--<span class="fl name">名字</span>-->
+              <!--<span class="fr">时间</span>-->
+            <!--</div>-->
+            <!--<div class="content_text">-->
+              <!--代码,这是什么b数据,这么难写,我草草-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    
+    
+  </div>
+  
+</div>
+
+
+
+
+<!--底部开始-->
+<footer class="footer">
+  <div class="footer_top clearfix">
+    <a href="">登录</a>
+    <a href="">注册</a>
+    <a class="gototop" href="javascript:;">返回顶部</a>
+  </div>
+  <div class="footer_down">
+    <p>
+      <a href="javascript:;">手机APP下载 </a>
+      <a href="index1.html">慢慢买手机版</a>
+      -- 掌上比价平台
+    </p>
+    <p>m.manmanbuy.com</p>
+  </div>
+</footer>
+
+
+
+<script type="text/html" id="content">
+  {{each result v i }}
+  <div class="title">
+    <h1>{{v.productName}}</h1>
+  </div>
+  <!--小标题-->
+  <div class="notes"><span>{{v.productFrom}}{{v.productTime}}{{v.productTips}}</span></div>
+  <!--内容-->
+  <div class="content">
+    <p>{{v.productInfo}}
+    </p>
+  
+    <p>{{@v.productImg}}</p>
+
+  
+    <!-- 地址跳转-->
+    <div class="href"><a href="javascript:;">前往购买</a></div>
+  </div>
+  {{/each}}
+
+</script>
+
+<script type="text/html" id="comment">
+  {{each result v i}}
+ {{@v.productComment}}
+  {{/each}}
+</script>
+
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/bese.js"></script>
+<script src="js/discount.js"></script>
+</body>
+</html>

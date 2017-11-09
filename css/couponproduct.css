@@ -1,0 +1,62 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  background-color: #f4483e;
+}
+.header .logo {
+  height: 50px;
+  width: 50px;
+}
+.header p {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.body .content {
+  width: 200px;
+  height: 200px;
+  margin: 200px auto;
+  background-color: #fff;
+  position: relative;
+}
+.body .content .arrleft {
+  position: absolute;
+  top: 55px;
+  left: -45px;
+  font-size: 60px;
+  color: #ccc;
+}
+.body .content .arrright {
+  position: absolute;
+  top: 55px;
+  right: -45px;
+  font-size: 60px;
+  color: #ccc;
+}
+.body .content .delete {
+  position: absolute;
+  top: -32px;
+  right: -16px;
+  font-size: 24px;
+  color: #ccc;
+  background-color: grey;
+  display: inline-block;
+  width: 17px;
+  height: 25px;
+  line-height: 1;
+  opacity: .4;
+}

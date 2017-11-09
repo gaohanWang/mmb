@@ -32,32 +32,27 @@
  <nav class="nav clearfix">
    <a href="index1.html">首页 ></a>
    <a href="productlist.html" class="tv">电视 ></a>
-   <a href="javascript:;">乐视tv ></a>
+   <a href="javascript:;" class="a3">乐视tv ></a>
    <a href="javascript:;" class="fr">筛选</a>
  </nav>
   
   <!--内容详情信息-->
   <div class="product_info clearfix">
-      <!--<div class="product_title_name">-->
-        <!--乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视-->
-      <!--</div>-->
-      <!--<div class="product_pic">-->
-        <!--<img src="images/product.jpg" alt="">-->
-      <!--</div>-->
+
+    <div class="pic">
+   <h1></h1>
+      <!--<div class="pic_img"><img src="" alt=""></div>-->
+    </div>
     <i class="icon_40"></i>
-    <!--<div class="tab">-->
-      <!--<ul class="clearfix">-->
-        <!--<li class="li_color">-->
-          <!--<a href="">比价购买</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="">产品参数</a>-->
-        <!--</li>-->
-        <!--<li>-->
-          <!--<a href="">评论(12313)</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>-->
+  
+    <div class="tab">
+      <ul>
+        <li><a href="javascript:;">比价购买</a></li>
+        <li><a href="javascript:;">商品参数</a></li>
+        <li><a href="javascript:;">评论(21323)</a></li>
+      </ul>
+    </div>
+    
     <div class="price clearfix">
       <div class="left">
         <div class="fl mt"><img src="images/ic_search.png" alt=""></div>
@@ -68,9 +63,11 @@
         <a href="javascript:;" class="fr">去购买</a>
       </div>
     </div>
-    <!--<div class="notes">-->
-      <!--* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。-->
-    <!--</div>-->
+    
+<div class="notes">
+  * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+</div>
+    
     <div class="product_com_title">
       <div>网友评价</div>
     </div>
@@ -118,24 +115,47 @@
     <p>m.manmanbuy.com</p>
   </div>
 </footer>
+<script type="text/html" id="tpl2">
+  {{each result v i }}
 
-<!--分类选-->
+  <a href="productlist.html?category={{v.category}}&categoryId={{v.categoryId}}" class="tv">{{v.category}} ></a>
+  
+  {{/each}}
+</script>
+
+
+<script type="text/html" id="tpl3">
+  {{each result v i }}
+  
+  <a href="javascript:;" class="a3">{{v.productName.slice(0,10)}} ></a>
+  
+  {{/each}}
+</script>
+
+<!--商品详情-->
 <script type="text/html" id="tpl">
   {{each result v i }}
-  <div class="product_title_name">
-    {{v.productName}}
-  </div>
+  <h1>{{v.productName}}</h1>
   <div class="product_pic">
-    {{@v.productImg}}
+    <div class="pic_img">
+      {{@v.productImg}}
+    </div>
+    
   </div>
 
-    {{@v.bjShop}}
+
 
 {{/each}}
 
 </script>
 
-<!--商品-->
+<script type="text/html" id="tpl1">
+  
+  {{@v.bjShop}}
+  
+</script>
+
+<!--评价-->
 <script type="text/html" id="tplproduct">
   {{each result v i }}
   <li class="clearfix">

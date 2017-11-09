@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.header .logo {
+  height: 50px;
+  width: 50px;
+}
+.header p {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+body,
+html {
+  background-color: #fff;
+}
+.setenav_nav {
+  background-color: #fff;
+}
+.setenav_nav .link {
+  margin: 20px auto;
+  width: 300px;
+}
+.setenav_nav .link .nav_link {
+  padding: 10px 8px;
+  background: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  float: left;
+  margin: 0 0 5px 5px;
+}
+.setenav_nav .link .nav_link img {
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}

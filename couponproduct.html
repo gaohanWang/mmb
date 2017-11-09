@@ -5,17 +5,17 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bese.css">
-  <link rel="stylesheet" href="css/moneyctrl.css">
-  <title>省钱控-最新优惠</title>
+  <link rel="stylesheet" href="css/couponproduct.css">
+  <title>肯德基优惠券</title>
 </head>
 <body>
 <!--头部开始-->
 <header id="header" class="header">
   <div class="logo">
     <a href="javascript:history.go(-1);"><img src="images/header_logo.png" alt=""></a>
-    <h1>省钱控-最新优惠</h1>
+    <h1>肯德基优惠券</h1>
   </div>
-  <p>省钱控-最新优惠</p>
+  <p>肯德基优惠券</p>
   <div class="appdown">
     <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
   </div>
@@ -29,22 +29,6 @@
 <!--挖个坑-->
   </ul>
   
-  <!--底部分页-->
-  <div class="page clearfix">
-    <span class="ye-up">
-      <a href="javascript:;">上一页</a>
-    </span>
-    <span class="ye-content">
-      <select name="" id="">
-        <option value="1">1/14</option>
-        <option value="2">14/14</option>
-
-      </select>
-    </span>
-    <span class="ye-down">
-      <a href="javascript:;">下一页</a>
-    </span>
-  </div>
 </div>
 
 
@@ -67,23 +51,31 @@
   </div>
 </footer>
 
+<!--弹出层-->
+<div class="body hide">
+  <div class="content">
+    <div class="arrleft"> < </div>
+    <div class="arrright"> > </div>
+    <div class="delete"> × </div>
+  </div>
+</div>
+
 
 
 <script type="text/html" id="tplproduct">
   {{each result v i }}
   <li>
-    <a href="moneyproduct.html?productId={{v.productId}}" class="clearfix">
+    <a href="javascript:;" class="clearfix tanchu">
       <div class="product_img fl">
-        {{@v.productImgSm}}
+        {{@v.couponProductImg}}
       </div>
       <div class="product_info">
-        <p class="product_info_title fl">{{v.productName}} <span style="color:orange">{{v.productPinkage}}</span>  </p>
+        <p class="product_info_title fl">{{v.couponProductName}} </p>
+        <p style="color:black;font-weight: 700">{{v.couponProductPrice}}</p>
+  
         <p class="product_info_time">
-          <span class="fl">{{v.productFrom}} | {{v.productTime}}</span>
-          <span class="fr">
-              <i class="icon_comment fl"></i>
-              {{v.productComCount.slice(1,2)}}
-            </span>
+          <span style="color:orange" class="fl"> {{v.couponProductTime}}</span>
+
         </p>
       </div>
     </a>
@@ -93,21 +85,12 @@
 </script>
 
 
-<script type="text/html" id="pages">
-  <span class="ye-content">
-      <select>
 
- {{each arrpage v i }}
-  <option value="{{i+1}}">{{i+1}}/{{arrpage.length}}</option>
-  {{/each}}
-      </select>
-    </span>
-</script>
 
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/bese.js"></script>
-<script src="js/moneyctrl.js"></script>
+<script src="js/couponproduct.js"></script>
 </body>
 </html>

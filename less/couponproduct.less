@@ -1,0 +1,66 @@
+@charset "UTF-8";
+//头部改造
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  background-color: #f4483e;
+  .logo{
+    height: 50px;
+    width: 50px;
+  }
+  p{
+    height: 50px;
+    line-height:50px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+//弹出遮罩层
+.body{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0;
+  background-color: rgba(0,0,0,.8);
+  .content{
+    width: 200px;
+    height: 200px;
+    margin:200px auto;
+    background-color: #fff;
+    position: relative;
+    .arrleft{
+      position: absolute;
+      top:55px;
+      left: -45px;
+      font-size: 60px;
+      color: #ccc;
+    }
+    .arrright{
+      position: absolute;
+      top:55px;
+      right:-45px;
+      font-size: 60px;
+      color: #ccc;
+    }
+    .delete{
+      position: absolute;
+      top: -32px;
+      right: -16px;
+      font-size: 24px;
+      color: #ccc;
+      background-color: grey;
+      display: inline-block;
+      width: 17px;
+      height: 25px;
+      line-height: 1;
+      opacity: .4;
+    }
+
+  }
+}

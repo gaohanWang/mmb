@@ -5,17 +5,17 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bese.css">
-  <link rel="stylesheet" href="css/inlanddiscount.css">
-  <title>国内折扣</title>
+  <link rel="stylesheet" href="css/sitenav.css">
+  <title>商场导航</title>
 </head>
 <body>
 <!--头部开始-->
 <header id="header" class="header">
   <div class="logo">
     <a href="javascript:history.go(-1);"><img src="images/header_logo.png" alt=""></a>
-    <h1>国内折扣</h1>
+    <h1>商场导航</h1>
   </div>
-  <p>国内折扣</p>
+  <p>商场导航</p>
   <div class="appdown">
     <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
   </div>
@@ -23,13 +23,19 @@
 </header>
 
 
-<!--商品内容-->
-<ul class="product_content clearfix">
-
-<!--挖个坑-->
-
-  
-</ul>
+<!--商品导航链接-->
+<div class="setenav_nav">
+    <div class="link clearfix">
+      <!--<a href="" class="nav_link">-->
+        <!--<img src="" alt="">-->
+        <!--京东商城-->
+      <!--</a>-->
+      <!--<a href="" class="nav_link">-->
+        <!--<img src="" alt="">-->
+        <!--当当-->
+      <!--</a>-->
+    </div>
+</div>
 
 
 
@@ -53,25 +59,23 @@
 
 
 
-<script type="text/html" id="tpl">
-  {{each result v i}}
-  <li>
-    <a href="discount.html?productId={{v.productId}}" data-id="{{v.id}}">
-      <div class="img">
-        {{@v.productImg}}
-      </div>
-      <p class="title">{{v.productName}}</p>
-      <p class="price">{{v.productPrice}}</p>
-      <p class="time">{{v.productFrom}}| {{v.productTime}}</p>
-    </a>
-  </li>
+<script type="text/html" id="link">
+  {{each result v i }}
+  <a href="{{@v.navHref}}" class="nav_link clearfix">
+    <img src="{{@v.navImg}}" alt="">
+    {{v.navTitle}}
+  </a>
   {{/each}}
+
 </script>
+
+
+
 
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="js/bese.js"></script>
-<script src="js/inlanddiscount.js"></script>
+<script src="js/sitenav.js"></script>
 </body>
 </html>

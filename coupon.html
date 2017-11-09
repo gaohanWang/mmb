@@ -49,7 +49,7 @@
 <script type="text/html" id="tpl">
   {{each result v i }}
   <li>
-    <a href="{{v.couponLink}}">
+    <a href="{{v.couponLink}}?couponId={{v.couponId}}">
       <img src="{{@v.couponImg}}" alt="">
       {{v.couponTitle}}
     </a>

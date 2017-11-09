@@ -1,0 +1,111 @@
+@charset "UTF-8";
+.header .logo {
+  height: 50px;
+  width: 50px;
+}
+.header p {
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.gsproduct_nav {
+  position: relative;
+}
+.gsproduct_nav .nav_tab_title {
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #adadad;
+  background-color: #fff;
+}
+.gsproduct_nav .nav_tab_title ul {
+  padding-right: 40px;
+}
+.gsproduct_nav .nav_tab_title li {
+  float: left;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  width: 33.33%;
+  font-size: 16px;
+  color: #000;
+}
+.gsproduct_nav .nav_tab_title li i {
+  display: inline-block;
+  border: 5px solid #000;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+.gsproduct_nav .nav_search {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+.gsproduct_nav .shopName {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+.gsproduct_nav .shopName p {
+  height: 34px;
+  line-height: 34px;
+  padding-left: 15px;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px  solid #cccccc;
+}
+.gsproduct_nav .area {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+}
+.gsproduct_nav .area p {
+  height: 34px;
+  line-height: 34px;
+  padding-left: 15px;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px  solid #cccccc;
+}
+.gsproduct_content ul {
+  padding: 10px;
+}
+.gsproduct_content ul li {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+}
+.gsproduct_content .wrap {
+  margin: 5px;
+  background-color: #fff;
+}
+.gsproduct_content .pic img {
+  width: 175px;
+  height: 175px;
+  margin: 0 auto ;
+}
+.gsproduct_content .info .title {
+  margin-top: 5px;
+  padding: 0 5px;
+  color: #000;
+}
+.gsproduct_content .price {
+  padding: 5px;
+}
+.gsproduct_content .price span {
+  color: red;
+  font-size: 20px;
+}
+.gsproduct_content .price a {
+  font-size: 14px;
+  background-color: orange;
+  padding: 5px 7px;
+  color: #fff;
+  border-radius: 4px;
+}

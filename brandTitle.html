@@ -5,15 +5,15 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="css/bese.css">
-  <link rel="stylesheet" href="css/category.css">
-  <title>比价搜索</title>
+  <link rel="stylesheet" href="css/brandTitle.css">
+  <title>品牌大全</title>
 </head>
 <body>
 <!--头部开始-->
 <header id="header" class="header">
   <div class="logo">
     <a href="index1.html"><img src="images/header_logo.png" alt=""></a>
-    <h1>慢慢买</h1>
+    <h1>品牌大全</h1>
   </div>
   <div class="appdown">
     <a href="javascript:;"><img src="images/header_app.png" alt=""></a>
@@ -28,43 +28,59 @@
 </section>
 
 <!--menu内容-->
-<section class="menu_title">
-  <!--挖个坑-->
-  <!--<div class="title">-->
-    <!--大电器-->
-  <!--</div>-->
+<section class="content">
+ <nav class="nav clearfix">
+   <a href="index1.html">首页 ></a>
+   <a href="category.html">全部分类 ></a>
+   <a href="javascript:;" class="fr">筛选</a>
+ </nav>
   
-
+  <!--标题排名显示   热门排行-->
+  <div class="brandTitle">热门品牌排行</div>
+  
+  <!--menu内容-->
+  <section class="menu_title">
+    <!--挖个坑-->
+    <div class="title">
+    大电器
+    </div>
+    
+    
     <ul class="clearfix childtitle hide">
       <!--<li>-->
-        <!--<a href="">-->
-          <!--电视-->
-        <!--</a>-->
+      <!--<a href="">-->
+      <!--电视-->
+      <!--</a>-->
       <!--</li>-->
       <!--<li>-->
-        <!--<a href="">-->
-          <!--电视-->
-        <!--</a>-->
+      <!--<a href="">-->
+      <!--电视-->
+      <!--</a>-->
       <!--</li>-->
       <!--<li>-->
-        <!--<a href="">-->
-          <!--电视-->
-        <!--</a>-->
+      <!--<a href="">-->
+      <!--电视-->
+      <!--</a>-->
       <!--</li>-->
       <!--<li>-->
-        <!--<a href="">-->
-          <!--电视-->
-        <!--</a>-->
+      <!--<a href="">-->
+      <!--电视-->
+      <!--</a>-->
       <!--</li>-->
       <!--<li>-->
-        <!--<a href="">-->
-          <!--电视-->
-        <!--</a>-->
+      <!--<a href="">-->
+      <!--电视-->
+      <!--</a>-->
       <!--</li>-->
     </ul>
-
-
+  
+  
+  </section>
+  
 </section>
+
+
+
 
 
 <!--底部开始-->
@@ -84,32 +100,23 @@
   </div>
 </footer>
 
-
 <script type="text/html" id="tpl">
   {{each result v i }}
-  <div class="title" data-id="{{v.titleId}}">
-    {{v.title}}
+  <div class="title" data-id="{{v.brandTitleId}}">
+    <a href="brand.html?brandTitleId={{v.brandTitleId}}">{{v.brandTitle}}</a>
+    
   </div>
   <ul class="clearfix childtitle hide">
-    
+  
   </ul>
-
+  
   {{/each}}
 </script>
 
-<script type="text/html" id="category">
-  {{each result v i }}
-  <li>
-    <a href="productlist.html?categoryId={{v.gsproduct}}&categoryId={{v.categoryId}}&titleId={{v.titleId}}">
-      {{v.category}}
-    </a>
-  </li>
-  {{/each}}
-</script>
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
-<!--<script src="js/bese.js"></script>-->
-<script src="js/category.js"></script>
+<script src="js/bese.js"></script>
+<script src="js/brandTitle.js"></script>
 </body>
 </html>
